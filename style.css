@@ -13,14 +13,13 @@ body {
   justify-content:center;
 }
 .card {
-  margin-top:1rem;
   height:80%;
   width:90%;
   background:#246;
   border-radius:5%;
   padding:4%;
   top:10px;
-  margin-inline:auto;
+  margin:auto;
  }
 
 .img-container {
