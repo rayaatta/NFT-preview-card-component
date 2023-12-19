@@ -1,0 +1,227 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600
+*/
+:root {
+    --body-bg:hsl(217, 54%, 11%);
+    --card-bg:hsl(216, 50%, 16%);
+    --txt-color: hsl(215, 51%, 70%);
+    --body-lightbg:#ccc;
+    --card-lightbg:#777;
+    --txt-lightcolor:#bca987;
+    --adventure-bodybg:#127734;
+    --adventure-cardbg:#459854;
+    --adventure-txt-color:#a14b2c;
+}
+* {
+   
+     padding-block:3px;
+     margin-block:1px;
+    font-family:sans-serif;
+    color:var(--txt-color);
+}
+body {
+    background:var(--body-bg);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.card {
+    background:var(--card-bg);
+    width:90%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+}
+section {
+    width:90%;
+    height:94%;
+    border-radius:10px;
+    margin-block:3%;
+}
+p {
+     font-size:18px;
+}
+.master-div {
+    position:relative;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr;
+    border-radius:10px;
+    margin:0;
+    padding:0;
+}
+.image-container {
+    grid-column:1/2;
+    grid-row:1/2;
+    width:100%;
+}
+.view-container {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0, 255, 247, 0.5);
+    visibility:hidden;
+}
+.master-div:hover .view-container {
+    visibility:visible;
+}
+body:has(.master-div:hover) .white {
+    color:rgb(0, 255, 247);
+}
+.icon-view {
+    width:10%;
+    margin:auto;
+}
+img.equilibrium {
+    width:100%;
+    height:100%;
+    border-radius:10px;
+}
+
+.white {
+    color:white;
+}
+.div3 {
+    display:flex;
+    justify-content:space-between;
+    border-bottom:1px solid  hsl(178, 100%, 50%);
+}
+.div3 > div{
+    display:flex;
+    align-items:center;
+    
+}
+
+.div4 {
+    display:flex;
+    align-items:center;
+}
+.div4 > div {
+    margin-inline:1px;
+}
+.avatar-container {
+    height:32px;
+    width:32px;
+    margin-right:2%;
+}
+.avatar {
+    width:32px;
+    height:32px;
+}
+input {
+    display:none
+}
+label:has(.default-theme) {
+    color:var(--txt-color);
+    background:var(--body-bg);
+    border: 2px solid var(--card-bg);
+    border-radius:9px;
+}
+label:has(.adventure-theme) {
+    color:var(--adventure-txt-color);
+    background:var(--adventure-bodybg);
+    border:2px solid var(--adventure-cardbg);
+    border-radius:9px;
+}
+label:has(.light-theme){
+    color:var(--txt-lightcolor);
+    background:var(--card-lightbg);
+    border:2px solid var(--body-lightbg);
+    border-radius:9px;
+}
+body:has(.default-theme:checked) {
+    background:var(--body-bg);
+    color:var(--txt-color);
+}
+body:has(.default-theme:checked) .card {
+    background:var(--card-bg);
+}
+body:has(.adventure-theme:checked) {
+    background:var(--adventure-bodybg);
+    color:var(--adventure-txt-color);
+}
+body:has(.adventure-theme:checked) .view-container {
+    background:rgb(47 255 0 / 50%);
+}
+body:has(.adventure-theme:checked) .card {
+    background:var(--adventure-cardbg);
+}
+body:has(.light-theme:checked) {
+    background:var(--body-lightbg);
+    color:var(--txt-lightcolor);
+}
+body:has(.light-theme:checked) .card {
+    background:var(--card-lightbg);
+}
+body:has(.light-theme:checked) .view-container {
+    background:rgb(169 181 181 / 50%);
+}
+@media screen and (min-width:375px) {
+    .card {
+        width:80%;
+    }
+}
+@media screen and (min-width:500px) {
+    .card {
+        width:70%;
+    }
+}
+@media screen and (min-width:700px) {
+    .card {
+        width:60%;
+    }
+}
+@media screen and (min-width:900px) {
+    .card {
+        width:46%;
+    }
+}
+@media screen and (min-width:1000px) {
+    .card {
+        width:40%;
+    }
+}
+@media screen and (min-width:1200px) {
+    .card {
+        width:30%;
+    }
+}
+@media screen and (min-width:1440px) {
+    .card {
+        width:20%;
+    }
+}
