@@ -12,8 +12,8 @@
 }
 * {
    
-     padding-block:3px;
-     margin-block:1px;
+    /* padding-block:3px;
+     margin-block:1px;*/
     font-family:sans-serif;
     color:var(--txt-color);
 }
